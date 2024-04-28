@@ -35,10 +35,10 @@ Please be sure to use HTTPS protocol or localhost to deploy your Web App, otherw
 
 ## Contents
 
-**call-engine-demo-vue2/**
+**demo-vue2/**
 - 这个目录包含了 TUICallEngine 的 Vue2 演示，集成了完整的TUICallEngine的所有功能。
 
-**call-engine-demo-vue3/**
+**demo-vue3/**
 - 这个目录包含了 TUICallEngine 的 Vue3 演示，集成了完整的TUICallEngine的所有功能。
 
 ## Have any questions?
