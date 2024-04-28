@@ -34,4 +34,3 @@ _English | [简体中文](README.zh_CN.md)_
 - Welcome to submit [**issue**](https://github.com/tencentyun/TUICallKit/issues)
 - Welcome to join our Telegram Group to communicate with our professional engineers! We are more than happy to hear from you，Click to join: https://t.me/+EPk6TMZEZMM5OGY1
 Or scan the QR code
-<img src="Preview/telegram-code.jpg"/>
