@@ -1,4 +1,3 @@
-_English | [简体中文](README.zh_CN.md)_
 <p align="center">
   <a href="https://trtc.io/">
     <img width="200" src="https://web.sdk.qcloud.com/trtc/webrtc/assets/trtc.io-logo.png">
@@ -9,22 +8,21 @@ _English | [简体中文](README.zh_CN.md)_
 
 <div align="center">
 
+An object-oriented TUICallEngine SDK library  
+
 ![NPM verison](https://img.shields.io/npm/v/tuicall-engine-webrtc) [![NPM downloads](https://img.shields.io/npm/dw/tuicall-engine-webrtc)](https://www.npmjs.com/package/tuicall-engine-webrtc) [![Typescript Supported](https://img.shields.io/badge/Typescript-Supported-blue)](https://www.npmjs.com/package/tuicall-engine-webrtc) [![Documents](https://img.shields.io/badge/-Documents-blue)](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html) 
 
 </div>
 
+<div align="center"> English | <a href="./README.zh_CN.md" target="_blank"> 简体中文</a> </div>
+
+
 ## Introduction
-TUICallEngine Web SDK is based on [Tencent Cloud's IM](https://cloud.tencent.com/document/product/269/42440) and [Tencent Cloud's real-time communication](https://cloud.tencent.com/document/product/647/16788) solution.
+TUICallEngine Web SDK is based on [Tencent Cloud's IM](https://cloud.tencent.com/document/product/269/42440) and [Tencent Cloud's real-time communication](https://cloud.tencent.com/document/product/647/16788) solution. Supports audio and video calls in two-person and multi-person scenarios.
 
-- **Multi-platform interconnection**: We support various platforms such as Web, Android, iOS, Flutter, etc., as well as support cross-platform frameworks such as uni-app, we also plan to support MacOS, Windows and other devices.
-
-- **Mobile terminal offline push**: We support offline wake-up on Android and iOS. When your app is offline, you can also receive call reminders in time. Currently, Google FCM, Apple, Xiaomi, Huawei, OPPO, VIVO, Meizu and other push services
-
-- **Group (multi-person) calls**: We not only support 1-to-1 video calls, but also support multi-person video calls within a group, inviting group members to join in the middle, and support group members to actively join the call and more.
-
-- **Multi-device login**: We also support the ability to log in to multiple devices on different platforms, your pad or mobile phone at the same time, for a larger screen and a more flexible experience.
-
-- **More Features**: We also support multiple features such as custom ringtones, custom avatars, AI noise reduction, weak network optimization...
+- [Online Demo](https://trtc.io/demo/homepage/#/detail?scene=callkit)
+- [Changelog](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/tutorial-20-CHANGELOG.html)
+- We offer SDKs for Web, Android, iOS, MiniProgram, Flutter, explore more in [trtc.io](https://trtc.io/products/call).
 
 
 ## Environment Supports
@@ -38,15 +36,53 @@ Please be sure to use HTTPS protocol or localhost to deploy your Web App, otherw
 | --------- | --------- | --------- | --------- | --------- | --------- |
 | 56+ | 80+ | 56+ | 11+ | 11+ | 46+ |
 
-## Contents
 
-**demo-vue2/**
-- this directory contains the vue2 demo of TUICallEngine, which is integrated with all the features of the full TUICallEngine.
+## Install
+npm:
+```
+$ npm install tuicall-engine-webrtc --save
+```
 
-**demo-vue3/**
-- this directory contains the vue3 demo of TUICallEngine, which is integrated with all the features of the full TUICallEngine.
+yarn:
+```
+$ yarn add tuicall-engine-webrtc
+```
 
-## Have any questions?
+Download manually：
 
-- Welcome to submit [**issue**](https://github.com/tencentyun/TUICallKit/issues)
-- Welcome to join our Telegram Group to communicate with our professional engineers! We are more than happy to hear from you，Click to join: https://t.me/+EPk6TMZEZMM5OGY1
+1. download [tuicall-engine-webrtc.js](https://www.unpkg.com/tuicall-engine-webrtc@latest/tuicall-engine-webrtc.js).
+2. copy `tuicall-engine-webrtc.js` to your project.
+
+
+## Usage
+Refer to the following two tutorials for a quick run-through of the demo and how to use the SDK to implement basic audio and video calling functionality.
+
+- [Demo Quick Run](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/tutorial-00-%E5%AE%9E%E7%8E%B0%E5%8F%8C%E4%BA%BA%E9%80%9A%E8%AF%9D.html)
+- [TUICallEngine Github Demo](https://github.com/mango2630/rtc-call-engine/tree/main/Web)
+
+Explore SDK documents：[TUICallEngine Web SDK](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html)
+
+
+## API Overview
+- [TUICallEngine](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html) is the main entry for TUICallEngine SDK, providing APIs such as create tuiCallEngine instance [TUICallEngine.createInstance](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#.createInstance), [tuiCallEngine.login](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#login), [tuiCallEngine.call](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#call),  [tuiCallEngine.groupCall](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#groupCall).
+- [tuiCallEngine](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html) instance, provides the core capability for real-time audio and video calls.
+  - Start Call [call](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#call)
+  - Accept call [accept](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#accept)
+  - Reject call [reject](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#reject)
+  - Hangup call [hangup](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#hangup)
+  - Turn on camera [openCamera](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#openCamera)
+  - Turn on microphone [openMicrophone](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#openMicrophone)
+  - Turn off camera [closeCamera](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#closeCamera)
+  - Turn off microphone [closeMicrophone](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#closeMicrophone)
+  - Play remote video [startRemoteView](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#startRemoteView)
+  - Stop playing remote video [stopRemoteView](https://web.sdk.qcloud.com/component/trtccalling/doc/TUICallEngine/web/en/TUICallEngine.html#stopRemoteView)
+
+
+## Directory
+```
+├── README-zh_CN.md
+├── README.md
+├── index.d.ts // ts declaration file
+├── package.json
+└── tuicall-engine-webrtc.js // sdk file base on ES modules
+```
